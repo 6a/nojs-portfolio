@@ -19,6 +19,21 @@ body {
     background: linear-gradient(rgb(134, 129, 134), rgb(1, 13, 27));
 }
 
+/* main container */
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: relative;
+}
+
+.container p {
+    text-align: justify;
+}
+
+
 /* HELPERS */
 .ns {
     -moz-user-select: none;
@@ -184,16 +199,6 @@ nav a {
 }
 
 /* RESPONSIVITY */
-
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-
-    position: relative;
-}
-
 @media (max-width: 600px) {
     .nav-style > *:nth-child(2) {
         display: none;
