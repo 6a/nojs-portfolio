@@ -1,0 +1,236 @@
+html {
+    font-family : 'ヒラギノ角ゴ ProN' , 'Hiragino Kaku Gothic ProN' , '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic' , 'メイリオ' , Meiryo , 'ＭＳ ゴシック' , 'MS Gothic' , HiraKakuProN-W3 , 'TakaoExゴシック' , TakaoExGothic , 'MotoyaLCedar' , 'Droid Sans Japanese' , sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    word-break: break-all;
+
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+    position: relative;
+
+    background: linear-gradient(rgb(134, 129, 134), rgb(1, 13, 27));
+}
+
+/* HELPERS */
+.ns {
+    -moz-user-select: none;
+    -ms-touch-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* STYLING */
+
+/* NAV */
+
+nav {
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    font-size: 1.2em;  
+    background-color: rgba(255, 255, 255, 0.1);   
+}
+
+nav > div {
+    height: inherit;
+}
+
+.nav-style {  
+    display: flex;
+    align-content: center;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.nav-style div:nth-child(1) {
+    margin-right: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    padding: 20px 20px;
+    box-sizing: border-box;
+    background-color: inherit;
+    border: none;
+    height: 100%;
+}
+
+.nav-style > *:nth-child(3) {
+    display: none;
+}
+
+.hamburger {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 20px;
+    margin: auto 0;
+    cursor: pointer;
+
+    position: relative;
+
+    -webkit-backface-visibility: hidden;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+.hamburger div {
+    height: 3px;
+    background-color: red;
+    width: 26px;
+
+    opacity: 1;
+
+    transition: 0.5s all ease-out;
+    transform-origin: center;
+
+    pointer-events: none;
+}
+
+.hamburger:focus div:nth-child(1) {
+    transform: translate(0, 8px)  rotate(225deg);
+}
+
+.hamburger:focus div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger:focus div:nth-child(3) {
+    transform: translate(0, -9px) rotate(-225deg);
+}
+
+.hamburger:focus ul {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s all ease-out;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.hamburger ul {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    opacity: 0;
+    visibility: hidden;  
+    transition: 0.2s all ease-in; 
+}
+
+@keyframes lateOpacity1 {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hamburger ul li {
+    animation: 0.3s ease-out 0s 1 lateOpacity1;
+}
+
+.hamburger:focus + .hamburger-de-focuser {
+    display: inline-block;
+}
+
+.hamburger-de-focuser {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    width: 26px;
+    height: 20px;
+
+    background-color: blue;
+    display: none;
+}
+
+/* SPLASH */
+
+#splash {
+    background-image: url("../media/img/test-1080.png");
+
+    height: 100vh; 
+    width: 100%;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* RESPONSIVITY */
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .nav-style > *:nth-child(2) {
+        display: none;
+
+    }  
+
+    .nav-style > *:nth-child(3) {
+        display: flex;
+        
+    }  
+
+    nav a {
+        padding: 15px 15px;
+    }
+
+    nav {
+        height: 50px;
+    }
+
+    .site-name {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+    
+}
