@@ -25,6 +25,8 @@ time, mark, audio, video {
 
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
+
+	color: rgb(240, 240, 240);
 }
 
 /* HTML5 display-role reset for older browsers */

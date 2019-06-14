@@ -11,19 +11,25 @@
     <link href="./css/style.css" rel="stylesheet" />
 
     <noscript>
-        <!-- fill nav bar with solid color -->
-        <style> nav { background-color: black; } </style>
+        <style>
+            nav { 
+                background-color: black;
+                border-bottom: 1px solid rgb(0, 174, 255);
+            }
+        </style>
     </noscript>
 
     <script>
-        var ALPHARANGE = [0.4, 1]
+        var ALPHARANGE_BG = [0.6, 1]
+        var ALPHARANGE_BORDER = [0.0, 1]
 
         function onWindowScroll(navbar) {
             var h = window.innerHeight - 70;
             var p = window.pageYOffset / h;
-            var alpha = ALPHARANGE[0] + ((ALPHARANGE[1] - ALPHARANGE[0]) * p)
-            var col = "rgba(0, 0, 0, " + alpha + ")"
-            navbar.style.backgroundColor = col
+            var bgCol = "rgba(0, 0, 0, " + (ALPHARANGE_BG[0] + ((ALPHARANGE_BG[1] - ALPHARANGE_BG[0]) * p)) + ")"
+            var borderCol = "rgba(0, 174, 255, " + (ALPHARANGE_BORDER[0] + ((ALPHARANGE_BORDER[1] - ALPHARANGE_BORDER[0]) * p)) + ")"
+            navbar.style.backgroundColor = bgCol
+            navbar.style.borderColor = borderCol
         }
 
         window.addEventListener("DOMContentLoaded", function() {

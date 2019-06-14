@@ -15,7 +15,7 @@ body {
 
     position: relative;
 
-    background: linear-gradient(rgb(0, 201, 255), rgb(1, 13, 27));
+    background: rgb(1, 11, 32);
 }
 
 section {
@@ -53,7 +53,6 @@ section {
     margin-left: auto;
 
     position: relative;
-
     box-sizing: border-box;
 }
 
@@ -125,7 +124,9 @@ nav {
     z-index: 1000;
     top: 0; right: 0; left: 0;
     font-size: 1.2em;  
-    background-color: rgba(0, 0, 0, 0.5);   
+    background-color: rgba(0, 0, 0, 0.6);
+
+    border-bottom: 1px solid rgba(0, 174, 255, 0);
 }
 
 nav > div {
@@ -155,8 +156,8 @@ nav a {
 }
 
 nav a:hover {
-    text-shadow: 0 0 10px rgb(0, 201, 255);
-    color: rgb(0, 201, 255);
+    text-shadow: 0 0 10px rgb(0, 174, 255);
+    color: rgb(0, 174, 255);
 }
 
 .nav-style > *:nth-child(3) {
@@ -184,7 +185,7 @@ nav a:hover {
 
 .hamburger div {
     height: 3px;
-    background: linear-gradient(to right, rgb(50, 4, 255), rgb(0, 201, 255));
+    background: linear-gradient(to left, rgb(0, 174, 255), rgb(153, 0, 255));
     width: 26px;
 
     opacity: 1;
@@ -255,7 +256,7 @@ nav a:hover {
 /* SPLASH */
 
 #splash {
-    background-image: url("https://dummyimage.com/1920x1080/000000/fff.jpg");
+    background-image: url("../media/img/test-1920-1080.jpg");
 
     height: 100vh; 
     width: 100%;
@@ -313,12 +314,12 @@ nav a:hover {
 
 .splash-scroll-down-indicator a:nth-child(2) div:nth-child(1) {
     transform: translate(5px, 25px) rotate(30deg);
-    background: linear-gradient(to left, rgb(50, 4, 255), rgb(0, 201, 255))
+    background: linear-gradient(to left, rgb(0, 174, 255), rgb(153, 0, 255));
 }
 
 .splash-scroll-down-indicator a:nth-child(2) div:nth-child(2) {
     transform: translate(55px, 25px) rotate(-30deg);
-    background: linear-gradient(to right, rgb(50, 4, 255), rgb(0, 201, 255))
+    background: linear-gradient(to right, rgb(0, 174, 255), rgb(153, 0, 255));
 }
 
 /* RESPONSIVITY */
