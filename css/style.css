@@ -15,7 +15,7 @@ body {
 
     position: relative;
 
-    background: rgb(5, 1, 12);
+    background: rgb(25, 20, 27);
 }
 
 section {
@@ -124,7 +124,7 @@ nav {
     z-index: 1000;
     top: 0; right: 0; left: 0;
     font-size: 1.2em;  
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(31, 20, 39, 0.6);
 
     border-bottom: 1px solid rgba(0, 174, 255, 0);
 }

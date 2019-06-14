@@ -13,7 +13,7 @@
     <noscript>
         <style>
             nav { 
-                background-color: black;
+                background-color: rgb(25, 20, 27);
                 border-bottom: 1px solid rgb(0, 174, 255);
             }
         </style>
@@ -26,7 +26,7 @@
         function onWindowScroll(navbar) {
             var h = window.innerHeight - 70;
             var p = window.pageYOffset / h;
-            var bgCol = "rgba(0, 0, 0, " + (ALPHARANGE_BG[0] + ((ALPHARANGE_BG[1] - ALPHARANGE_BG[0]) * p)) + ")"
+            var bgCol = "rgba(25, 20, 27, " + (ALPHARANGE_BG[0] + ((ALPHARANGE_BG[1] - ALPHARANGE_BG[0]) * p)) + ")"
             var borderCol = "rgba(0, 174, 255, " + (ALPHARANGE_BORDER[0] + ((ALPHARANGE_BORDER[1] - ALPHARANGE_BORDER[0]) * p)) + ")"
             navbar.style.backgroundColor = bgCol
             navbar.style.borderColor = borderCol
