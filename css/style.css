@@ -31,6 +31,15 @@ body {
     }
 }
 
+@keyframes flash {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
 
 /* main container */
 .container {
@@ -206,10 +215,72 @@ nav a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    position: relative;
+}
+
+.splash-scroll-down-indicator {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    animation: flash 2s ease-in-out 0s infinite alternate;
+}
+
+.splash-scroll-down-indicator a:nth-child(1) {
+    display: none;
+}
+
+.splash-scroll-down-indicator a:nth-child(1) img {
+    height: 50px;
+    box-shadow: 0 0 30px white;
+    border-radius: 1000000px;
+}
+
+
+.splash-scroll-down-indicator a:nth-child(2) {
+    height: 50px;
+    width: 120px;
+
+    display: inline-block;
+
+    position: relative;
+}
+
+.splash-scroll-down-indicator a:nth-child(2) div {
+    width: 60px;
+    box-shadow: 0 0 20px white;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+
+    border-radius: 4px;
+}
+
+.splash-scroll-down-indicator a:nth-child(2) div:nth-child(1) {
+    transform: translate(10px, 25px) rotate(30deg);
+
+
+}
+
+.splash-scroll-down-indicator a:nth-child(2) div:nth-child(2) {
+    transform: translate(60px, 25px) rotate(-30deg);
 }
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
+    .splash-scroll-down-indicator a:nth-child(1) {
+        display: inline-block;
+    }
+
+    .splash-scroll-down-indicator a:nth-child(2) {
+        display: none;
+    }
+
     .nav-style > *:nth-child(2) {
         display: none;
 
