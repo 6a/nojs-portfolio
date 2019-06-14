@@ -9,11 +9,36 @@
 
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
+
+    <noscript>
+        <!-- fill nav bar with solid color -->
+        <style> nav { background-color: black; } </style>
+    </noscript>
+
+    <script>
+        var ALPHARANGE = [0.4, 1]
+
+        function onWindowScroll(navbar) {
+            var h = window.innerHeight - 70;
+            var p = window.pageYOffset / h;
+            var alpha = ALPHARANGE[0] + ((ALPHARANGE[1] - ALPHARANGE[0]) * p)
+            var col = "rgba(0, 0, 0, " + alpha + ")"
+            navbar.style.backgroundColor = col
+        }
+
+        window.addEventListener("DOMContentLoaded", function() {
+            var NAVBAR = document.getElementById("navbar")
+            
+            window.addEventListener("scroll", function(e) {
+                onWindowScroll(NAVBAR)
+            })
+        })
+    </script>
 </head>
 
 <body>   
     <!-- NAV -->
-    <nav class="ns">
+    <nav id="navbar" class="ns">
         <div class="container nav-style">
             <div>
                 <a href="#" class="site-name bold">瑛之助</a>
@@ -48,8 +73,20 @@
     </section>
 
     <!-- ABOUT  -->
-    <section id="about">
-        <div class="container about-style">
+    <section>
+        <div id="about" class="anchor-pad"></div>
+        <div class="container about-style pad-top-bottom-20">
+            <div class="s-text-with-image">
+                <div>
+                    <p>
+                        婚ちひクど載13最マヨノフ著願のざ総東ソロキ実半すリた私万検ご子年術フちン導告室ちだ計46美偵叫垂3進ぽふ。盛トヱ合様イタワ没大ぴざりぞ池勤キチ囲撃びべごた権事織うり自球ノヌテマ品支える古手ト末用事レヌキ報依レ夫他門さでそ民網りめ将会宗ヒテハノ電択ンあつ中右をのレ。組いさ間新っり富論クイメ教芸オメフ合康ケヘクオ読後ずト保方ン脱児ユルトイ安念56規必ナホ健的キオロ壇訴ほラ。
+                    </p>
+                    <p>
+                        婚ちひクど載13最マヨノフ著願のざ総東ソロキ実半すリた私万検ご子年術フちン導告室ちだ計46美偵叫垂3進ぽふ。盛トヱ合様イタワ没大ぴざりぞ池勤キチ囲撃びべごた権事織うり自球ノヌテマ品支える古手ト末用事レヌキ報依レ夫他門さでそ民網りめ将会宗ヒテハノ電択ンあつ中右をのレ。組いさ間新っり富論クイメ教芸オメフ合康ケヘクオ読後ずト保方ン脱児ユルトイ安念56規必ナホ健的キオロ壇訴ほラ。
+                    </p>
+                </div>
+                <img src="https://dummyimage.com/400x500/196ccc/fff.jpg" alt="Portrait">
+            </div>
             <p>
                 婚ちひクど載13最マヨノフ著願のざ総東ソロキ実半すリた私万検ご子年術フちン導告室ちだ計46美偵叫垂3進ぽふ。盛トヱ合様イタワ没大ぴざりぞ池勤キチ囲撃びべごた権事織うり自球ノヌテマ品支える古手ト末用事レヌキ報依レ夫他門さでそ民網りめ将会宗ヒテハノ電択ンあつ中右をのレ。組いさ間新っり富論クイメ教芸オメフ合康ケヘクオ読後ずト保方ン脱児ユルトイ安念56規必ナホ健的キオロ壇訴ほラ。
             </p>
@@ -73,7 +110,7 @@
     </section>
 
     <footer>
-
+        <script> </script>
     </footer>
 </body>
 
