@@ -18,12 +18,14 @@ body {
     background: rgb(25, 20, 27);
 
     color: rgb(240, 240, 240);
-
-
 }
 
 section {
     position: relative;
+}
+
+hr {
+    margin: 0;
 }
 
 /* ANIMATIONS */
@@ -331,6 +333,7 @@ nav a:hover {
 footer {
     width: 100%;
     border-top: 2px solid rgb(115, 0, 255);
+    position: relative;
 }
 
 footer > div {
@@ -351,23 +354,28 @@ footer > div {
     padding: 50px 20px; 
 }
 
-#qa-section {
+
+.footer-content > .container > *:last-child > *:last-child {
+    padding-bottom: 0;
+}
+
+.footer-section {
     width: 100%;
 }
 
-#qa-section h1 {
+.footer-section h1 {
     font-size: 1.4em;
     line-height: 1em;
     padding: 20px 0;
 }
 
-#qa-section h3 {
+.footer-section h3 {
     font-size: 1.1em;
     line-height: 1em;
     padding: 5px 0;
 }
 
-#qa-section p {
+.footer-section p {
     padding-bottom: 20px;
 }
 
@@ -383,6 +391,8 @@ footer > div {
     grid-auto-columns: -webkit-min-content;
 
     grid-auto-columns: min-content;
+
+    padding-bottom: 50px;
 }
 
 .footer-links a:nth-child(1) {
@@ -424,38 +434,6 @@ footer > div {
     filter: none;
 }
 
-.footer-links a:hover .contact-popup {
-    opacity: 1;
-    visibility: visible;
-}
-
-.contact-popup {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    background: linear-gradient(to top right, hsl(199, 100%, 50%), hsl(276, 100%, 50%));
-    color: rgb(235, 235, 235);
-
-    bottom: 120%;
-    padding: 5px;
-    left: -25px;
-    right: -25px;
-    text-align: center;
-
-    transition: 0.2s all ease-out;
-}
-
-.contact-popup::after {
-    content: " ";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #2682ff transparent transparent transparent;
-}
-
 .footer-copyright {
     background-color: rgba(0, 0, 0, 0.4);    
 
@@ -468,20 +446,20 @@ footer > div {
     justify-content: flex-end;
 
     box-sizing: border-box;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .footer-copyright p {
     text-align: right;
 }
 
+footer a {
+    text-decoration: none;
+    color: rgb(255, 223, 30);
+}
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
-    .contact-popup {
-        display: none;
-    }
-
     .footer-links {  
         -ms-grid-columns: auto 20px auto 20px auto 20px auto 20px auto 20px auto;
         grid-template-columns: repeat(3, auto);
@@ -498,7 +476,7 @@ footer > div {
         filter: none;
     }
 
-    #qa-section h1 {
+    .footer-section h1 {
         text-align: center;
     }
 
