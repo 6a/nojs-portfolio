@@ -128,7 +128,7 @@ nav {
     z-index: 1000;
     top: 0; right: 0; left: 0;
     font-size: 1.2em;  
-    background-color: rgb(31, 20, 39, 0.6);
+    background-color: rgba(31, 20, 39, 0.6);
 
     border-bottom: 2px solid rgba(115, 0, 255, 0);
 }
@@ -351,10 +351,24 @@ footer > div {
     padding: 50px 20px; 
 }
 
-.footer-content > .container p {
-    padding-bottom: 20px;
-    font-size: 1.2em;
+#qa-section {
+    width: 100%;
+}
+
+#qa-section h1 {
+    font-size: 1.4em;
     line-height: 1em;
+    padding: 20px 0;
+}
+
+#qa-section h3 {
+    font-size: 1.1em;
+    line-height: 1em;
+    padding: 5px 0;
+}
+
+#qa-section p {
+    padding-bottom: 20px;
 }
 
 .footer-links {
@@ -427,6 +441,8 @@ footer > div {
     left: -25px;
     right: -25px;
     text-align: center;
+
+    transition: 0.2s all ease-out;
 }
 
 .contact-popup::after {
@@ -452,7 +468,7 @@ footer > div {
     justify-content: flex-end;
 
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 20px 0;
 }
 
 .footer-copyright p {
@@ -480,6 +496,10 @@ footer > div {
 
     .footer-links a img {
         filter: none;
+    }
+
+    #qa-section h1 {
+        text-align: center;
     }
 
     .anchor-pad {
