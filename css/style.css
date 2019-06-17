@@ -16,6 +16,8 @@ body {
     position: relative;
 
     background: rgb(25, 20, 27);
+
+    color: rgb(240, 240, 240);
 }
 
 section {
@@ -83,7 +85,7 @@ section {
     display: -ms-grid;
     display: grid;
 
-    -ms-grid-columns: auto s;
+    -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
 }
 
@@ -321,6 +323,104 @@ nav a:hover {
     transform: translate(55px, 25px) rotate(-30deg);
     background: linear-gradient(to right, rgb(0, 174, 255), rgb(153, 0, 255));
 }
+
+/* FOOTER */
+footer {
+    width: 100%;
+    border-top: 1px solid rgb(0, 174, 255);
+}
+
+footer > div {
+    width: 100%;
+}
+
+.footer-content {
+    background: rgba(0, 0, 0, 0.1);        
+}
+
+.footer-content > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 50px 20px; 
+}
+
+.footer-content > .container p {
+    padding-top: 20px;
+    font-size: 1.2em;
+}
+
+.footer-links {
+    display: -ms-grid;
+    display: grid;
+
+    grid-template-columns: repeat(6, auto);
+
+    grid-column-gap: 20px;
+
+    grid-auto-columns: min-content;
+}
+
+.footer-links a {
+    position: relative;
+}
+
+.footer-links a img {
+    vertical-align: bottom;
+}
+
+.footer-links a:hover .contact-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-popup {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background: linear-gradient(to top right, hsl(199, 100%, 50%), hsl(276, 100%, 50%));
+    color: rgb(235, 235, 235);
+
+    bottom: 120%;
+    padding: 5px;
+    left: -25px;
+    right: -25px;
+    text-align: center;
+}
+
+.contact-popup::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2682ff transparent transparent transparent;
+}
+
+.footer-copyright {
+    background-color: rgba(0, 0, 0, 0.4);    
+
+    color: rgb(214, 214, 214);
+}
+
+.footer-copyright > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.footer-copyright p {
+    text-align: right;
+}
+
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
