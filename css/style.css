@@ -18,6 +18,8 @@ body {
     background: rgb(25, 20, 27);
 
     color: rgb(240, 240, 240);
+
+
 }
 
 section {
@@ -128,7 +130,7 @@ nav {
     font-size: 1.2em;  
     background-color: rgb(31, 20, 39, 0.6);
 
-    border-bottom: 1px solid rgba(0, 174, 255, 0);
+    border-bottom: 2px solid rgba(115, 0, 255, 0);
 }
 
 nav > div {
@@ -158,8 +160,7 @@ nav a {
 }
 
 nav a:hover {
-    text-shadow: 0 0 10px rgb(0, 174, 255);
-    color: rgb(0, 174, 255);
+    color: rgb(255, 223, 30);
 }
 
 .nav-style > *:nth-child(3) {
@@ -235,6 +236,8 @@ nav a:hover {
     transition: 0.2s all ease-in; 
 
     z-index: -1;
+    
+    -webkit-overflow-scrolling: touch;
 }
 
 .hamburger ul li {
@@ -268,8 +271,6 @@ nav a:hover {
     background-size: cover;
 
     position: relative;
-
-    z-index: 100;
 }
 
 .splash-scroll-down-indicator {
@@ -282,6 +283,8 @@ nav a:hover {
     justify-content: center;
 
     animation: flash 2s ease-in-out 0s infinite alternate;
+
+    z-index: 100;
 }
 
 .splash-scroll-down-indicator a:nth-child(1) {
@@ -327,7 +330,7 @@ nav a:hover {
 /* FOOTER */
 footer {
     width: 100%;
-    border-top: 1px solid rgb(0, 174, 255);
+    border-top: 2px solid rgb(115, 0, 255);
 }
 
 footer > div {
@@ -349,19 +352,47 @@ footer > div {
 }
 
 .footer-content > .container p {
-    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 1.2em;
+    line-height: 1em;
 }
 
 .footer-links {
     display: -ms-grid;
     display: grid;
 
+    -ms-grid-columns: auto 20px auto 20px auto 20px auto 20px auto 20px auto;
     grid-template-columns: repeat(6, auto);
 
-    grid-column-gap: 20px;
+    grid-gap: 20px;
+
+    grid-auto-columns: -webkit-min-content;
 
     grid-auto-columns: min-content;
+}
+
+.footer-links a:nth-child(1) {
+    -ms-grid-column: 1;
+}
+
+.footer-links a:nth-child(2) {
+    -ms-grid-column: 3;
+}
+
+.footer-links a:nth-child(3) {
+    -ms-grid-column: 5;
+}
+
+.footer-links a:nth-child(4) {
+    -ms-grid-column: 7;
+}
+
+.footer-links a:nth-child(5) {
+    -ms-grid-column: 9;
+}
+
+.footer-links a:nth-child(6) {
+    -ms-grid-column: 11;
 }
 
 .footer-links a {
@@ -370,6 +401,13 @@ footer > div {
 
 .footer-links a img {
     vertical-align: bottom;
+    filter: contrast(0) brightness(0.6);
+
+    transition: 0.2s all ease-in-out;
+}
+
+.footer-links a:hover img {
+    filter: none;
 }
 
 .footer-links a:hover .contact-popup {
@@ -424,6 +462,26 @@ footer > div {
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
+    .contact-popup {
+        display: none;
+    }
+
+    .footer-links {  
+        -ms-grid-columns: auto 20px auto 20px auto 20px auto 20px auto 20px auto;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto;
+
+        grid-column-gap: 40px;
+        
+        grid-auto-columns: -webkit-min-content;
+    
+        grid-auto-columns: min-content;
+    }
+
+    .footer-links a img {
+        filter: none;
+    }
+
     .anchor-pad {
         top: -60px;
     }

@@ -16,7 +16,7 @@
         <style>
             nav { 
                 background-color: rgb(25, 20, 27);
-                border-bottom: 1px solid rgb(0, 174, 255);
+                border-bottom: 1px solid rgb(115, 0, 255);
             }
         </style>
     </noscript>
@@ -29,9 +29,17 @@
             var h = window.innerHeight - 70;
             var p = window.pageYOffset / h;
             var bgCol = "rgba(25, 20, 27, " + (ALPHARANGE_BG[0] + ((ALPHARANGE_BG[1] - ALPHARANGE_BG[0]) * p)) + ")"
-            var borderCol = "rgba(0, 174, 255, " + (ALPHARANGE_BORDER[0] + ((ALPHARANGE_BORDER[1] - ALPHARANGE_BORDER[0]) * p)) + ")"
+            var borderCol = "rgba(115, 0, 255, " + (ALPHARANGE_BORDER[0] + ((ALPHARANGE_BORDER[1] - ALPHARANGE_BORDER[0]) * p)) + ")"
             navbar.style.backgroundColor = bgCol
             navbar.style.borderColor = borderCol
+        }
+
+        function toggleBodyScroll(lock) {
+            if (lock) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "initial";
+            }
         }
 
         window.addEventListener("DOMContentLoaded", function() {
@@ -39,6 +47,16 @@
             
             window.addEventListener("scroll", function(e) {
                 onWindowScroll(NAVBAR)
+            })
+
+            var HAMBURGER = document.getElementById("hamburger")
+
+            HAMBURGER.addEventListener("focus", function(e) {
+                toggleBodyScroll(true)
+            })
+
+            HAMBURGER.addEventListener("focusout", function(e) {
+                toggleBodyScroll(false)
             })
         })
     </script>
@@ -57,7 +75,7 @@
                 <a href="#" class="bold">グループ作</a>
                 <a href="#info" class="bold">詳細</a>
             </div>
-            <div class="hamburger" tabindex="0">
+            <div id="hamburger" class="hamburger" tabindex="0">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -121,6 +139,9 @@
     <footer id="info">
         <div class="footer-content">
             <div class="container">
+                <div>
+                    <p>コンタクト方法</p>
+                </div>
                 <div class="footer-links">
                     <a href="mailto:jestanton@outlook.com" rel="noopener noreferrer" target="_blank">
                         <div class="contact-popup">メール</div>
@@ -147,14 +168,11 @@
                         <img src="./media/img/icon/icon-twitter.svg" alt="Twitter Contact">
                     </a>
                 </div>
-                <div>
-                    <p>コンタクト方法</p>
-                </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <p>ゲーム企業就職希望者です！ご質問・お問い合わせ・募集等の場合は遠慮なくご連絡ください！</p>
+                <p>ゲーム企業就職希望者です！ご質問・お問い合わせ・募集等の際は遠慮なくご連絡ください！</p>
                 <p>&copy; 2019 James Einosuke Stanton.</p>
             </div>
         </div>
