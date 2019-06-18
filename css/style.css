@@ -426,7 +426,7 @@ footer > div {
 
 .footer-links a img {
     vertical-align: bottom;
-    filter: contrast(0) brightness(0.6);
+    filter: contrast(0) brightness(1.2);
 
     transition: 0.2s all ease-in-out;
 }
