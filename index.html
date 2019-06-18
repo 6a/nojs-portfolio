@@ -22,17 +22,8 @@
     </noscript>
 
     <script>
-        var ALPHARANGE_BG = [0.6, 1]
+        var ALPHARANGE_BG = [1, 1]
         var ALPHARANGE_BORDER = [0.0, 1]
-
-        function onWindowScroll(navbar) {
-            var h = window.innerHeight - 70;
-            var p = window.pageYOffset / h;
-            var bgCol = "rgba(25, 20, 27, " + (ALPHARANGE_BG[0] + ((ALPHARANGE_BG[1] - ALPHARANGE_BG[0]) * p)) + ")"
-            var borderCol = "rgba(115, 0, 255, " + (ALPHARANGE_BORDER[0] + ((ALPHARANGE_BORDER[1] - ALPHARANGE_BORDER[0]) * p)) + ")"
-            navbar.style.backgroundColor = bgCol
-            navbar.style.borderColor = borderCol
-        }
 
         function toggleBodyScroll(lock) {
             if (lock) {
@@ -43,12 +34,6 @@
         }
 
         window.addEventListener("DOMContentLoaded", function() {
-            var NAVBAR = document.getElementById("navbar")
-            
-            window.addEventListener("scroll", function(e) {
-                onWindowScroll(NAVBAR)
-            })
-
             var HAMBURGER = document.getElementById("hamburger")
 
             HAMBURGER.addEventListener("focus", function(e) {
@@ -92,7 +77,15 @@
 
     <!-- SPLASH  -->
     <section id="splash">
-        <div class="splash-scroll-down-indicator">
+        <video playsinline muted autoplay loop poster="" width="1920" height="1080">
+            <source src="./media/video/splash-veryslow-cr22-720.mp4" type="video/mp4">
+        </video>
+        <div class="splash-overlay ns">
+            <h1 class="splash-name-standard">スタントン ジェームズ&NonBreakingSpace;瑛之助</h1>
+            <h1 class="splash-name-mob">スタントン<br>ジェームズ<br>瑛之助</h1>
+            <p>ゲーム開発者</p>
+        </div>
+        <div class="splash-scroll-down-indicator" tabindex="1">
             <a href="#about"><img src="./media/img/down-arrow-in-small-circle.svg" alt="Down Arrow"></a>
             <a href="#about"><div></div><div></div></a>
         </div>
@@ -196,7 +189,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <p>&copy; 2019 James Einosuke Stanton.</p>
+                <p>&copy; 2019 James Einosuke Stanton</p>
             </div>
         </div>
 

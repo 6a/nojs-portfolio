@@ -23,6 +23,7 @@ body {
 
 section {
     position: relative;
+    background: rgb(31, 28, 32);
 }
 
 hr {
@@ -132,11 +133,11 @@ nav {
     z-index: 1000;
     top: 0; right: 0; left: 0;
     font-size: 1.1em;  
-    background-color: rgba(25, 20, 27, 0.6);
+    background-color: rgba(25, 20, 27, 1);
 
     box-sizing: border-box;
 
-    border-bottom: 2px solid rgba(115, 0, 255, 0);
+    border-bottom: 2px solid rgba(115, 0, 255, 1);
 }
 
 nav > div {
@@ -267,16 +268,55 @@ nav a:hover {
 /* SPLASH */
 
 #splash {
-    background-image: url("../media/img/test-1920-1080.jpg");
-
     height: 100%; 
     width: 100%;
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
+    background-color: inherit;
 
     position: relative;
+}
+
+#splash video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    z-index: 0;
+}
+
+.splash-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.splash-overlay > * {
+    text-align: center;
+    word-break: keep-all;
+    font-size: 150%;
+    text-shadow: 0 0 10px black;
+}
+
+.splash-name-standard {
+    display: block;
+    font-size: 400%;
+}
+
+.splash-name-mob {
+    display: none;
+    font-size: 300%;
 }
 
 .splash-scroll-down-indicator {
@@ -335,6 +375,7 @@ nav a:hover {
 
 /* FOOTER */
 footer {
+    background: rgb(31, 28, 32);
     width: 100%;
     font-size: 14px;
     border-top: 2px solid rgb(115, 0, 255);
@@ -474,6 +515,14 @@ footer a {
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
+    .splash-name-standard {
+        display: none;
+    }
+    
+    .splash-name-mob {
+        display: block;
+    }
+
     .footer-links {  
         -ms-grid-columns: auto 20px auto 20px auto 20px auto 20px auto 20px auto;
         grid-template-columns: repeat(3, auto);
