@@ -27,6 +27,7 @@ section {
 
 hr {
     margin: 0;
+    margin-top: 50px;
 }
 
 /* ANIMATIONS */
@@ -153,7 +154,7 @@ nav > div {
 nav a {
     text-decoration: none;
     color: rgb(245, 245, 245);
-    padding: 20px 20px;
+    padding: 20px 0 20px 20px;
     box-sizing: border-box;
     background-color: inherit;
     border: none;
@@ -295,15 +296,15 @@ nav a:hover {
 }
 
 .splash-scroll-down-indicator a:nth-child(1) img {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     box-shadow: 0 0 20px black;
     border-radius: 1000000px;
 }
 
 
 .splash-scroll-down-indicator a:nth-child(2) {
-    height: 50px;
+    height: 60px;
     width: 120px;
 
     display: inline-block;
@@ -352,7 +353,7 @@ footer > div {
     align-items: center;
 
     box-sizing: border-box;
-    padding: 50px 20px; 
+    padding: 20px; 
 }
 
 
@@ -362,6 +363,13 @@ footer > div {
 
 .footer-section {
     width: 100%;
+}
+
+.footer-social-header {
+    font-size: 1.4em;
+    line-height: 1em;
+    padding-bottom: 20px;
+    padding-top: 5px;
 }
 
 .footer-section h1 {
@@ -380,6 +388,10 @@ footer > div {
     padding-bottom: 20px;
 }
 
+.footer-section p:last-child {
+    padding-bottom: 0;
+}
+
 .footer-links {
     display: -ms-grid;
     display: grid;
@@ -392,8 +404,6 @@ footer > div {
     grid-auto-columns: -webkit-min-content;
 
     grid-auto-columns: min-content;
-
-    padding-bottom: 50px;
 }
 
 .footer-links a:nth-child(1) {
@@ -427,7 +437,7 @@ footer > div {
 .footer-links a img {
     vertical-align: bottom;
     filter: contrast(0) brightness(1.2);
-
+    width: 54px;
     transition: 0.2s all ease-in-out;
 }
 
