@@ -1,5 +1,4 @@
 html {
-    font-size: 14px;
     letter-spacing: 0.05em;
     word-break: break-all;
 
@@ -243,8 +242,7 @@ nav a:hover {
     transition: 0.2s all ease-in; 
 
     z-index: -1;
-    
-    -webkit-overflow-scrolling: touch;
+    font-size: 140%;
 }
 
 .hamburger ul li {
@@ -272,6 +270,7 @@ nav a:hover {
     width: 100%;
     overflow: hidden;
     background-color: inherit;
+    font-size: 14px;
 
     position: relative;
 }
@@ -307,6 +306,10 @@ nav a:hover {
     word-break: keep-all;
     font-size: 150%;
     text-shadow: 0 0 10px black;
+}
+
+.splash-overlay > p {
+    padding-top: 20px;
 }
 
 .splash-name-standard {
@@ -377,7 +380,7 @@ nav a:hover {
 footer {
     background: rgb(31, 28, 32);
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     border-top: 2px solid rgb(115, 0, 255);
     position: relative;
 }
