@@ -24,7 +24,8 @@
     <script>
         var ALPHARANGE_BG = [1, 1]
         var ALPHARANGE_BORDER = [0.0, 1]
-
+        var prevState = ""
+        
         function toggleBodyScroll(lock) {
             if (lock) {
                 document.body.style.overflow = "hidden";
@@ -37,11 +38,18 @@
             var HAMBURGER = document.getElementById("hamburger")
 
             HAMBURGER.addEventListener("focus", function(e) {
+                prevState = (window.location.hash === "#hamburger") ? "#" : window.location.hash
+                history.replaceState("1337", "hamburger", "#hamburger")
                 toggleBodyScroll(true)
             })
 
             HAMBURGER.addEventListener("focusout", function(e) {
+                history.replaceState("0", null, prevState)
                 toggleBodyScroll(false)
+            })
+
+            window.addEventListener("hashchange", function (e) {
+                HAMBURGER.blur()
             })
         })
     </script>
