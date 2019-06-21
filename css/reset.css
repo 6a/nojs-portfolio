@@ -53,7 +53,7 @@ table {
 
 /* CUSTOM */
 a {
-	display: inline-block
+	display: inline;
 }
 
 body {

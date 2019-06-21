@@ -168,6 +168,7 @@ nav a {
     height: 100%;
     margin: 0 auto;
     line-height: 30px;
+    display: inline-block;
 }
 
 nav a:hover {
@@ -554,6 +555,10 @@ footer a {
     width: 100%;
 }
 
+.project-media > video:fullscreen {
+    border: none;
+}
+
 .project-media > figcaption {
     box-sizing: border-box;
     display: block;
@@ -591,6 +596,17 @@ footer a {
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
+    .project-media > video {
+        border: 1px solid rgb(153, 0, 255);
+        border-image-source: linear-gradient(to top, rgb(0, 174, 255), rgb(153, 0, 255));
+        border-image-slice: 1;
+    }
+    
+    .container {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
     .splash-name-standard {
         display: none;
     }
