@@ -176,6 +176,8 @@ nav {
 
 nav > div {
     height: inherit;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
 }
 
 .nav-style {  
@@ -672,6 +674,12 @@ footer a {
 /* RESPONSIVITY */
 @media (max-width: 600px) {
     .project-media > video {
+        border: 1px solid rgb(153, 0, 255);
+        border-image-source: linear-gradient(to top, rgb(0, 174, 255), rgb(153, 0, 255));
+        border-image-slice: 1;
+    }
+
+    .project-media > img {
         border: 1px solid rgb(153, 0, 255);
         border-image-source: linear-gradient(to top, rgb(0, 174, 255), rgb(153, 0, 255));
         border-image-slice: 1;
