@@ -51,6 +51,36 @@ hr {
     }
 }
 
+@keyframes textglitch {
+    0%, 100% {
+       transform: translateY(0);
+    }
+
+    49.0% {
+        transform: translateY(0);
+    }
+
+    49.4% {
+        transform: translateY(-7px);
+    }
+
+    49.8% {
+        transform: translateY(7px);
+    }
+
+    50.2% {
+        transform: translateY(-7px);
+    }
+
+    50.6% {
+        transform: translateY(7px);
+    }
+
+    51.0% {
+        transform: translateY(0);
+    }
+}
+
 /* main container */
 .container {
     padding-right: 20px;
@@ -292,13 +322,15 @@ nav a:hover {
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
     z-index: 0;
+    transform-style: preserve-3d;
 }
 
 .splash-overlay {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
     z-index: 1;
 
     display: flex;
@@ -307,15 +339,58 @@ nav a:hover {
     flex-direction: column;
 }
 
-.splash-overlay > * {
+.splash-overlay-fx {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 3px);
+    transform-style: preserve-3d;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.splash-overlay > * > * {
     text-align: center;
     word-break: keep-all;
     font-size: 150%;
     text-shadow: 0 0 10px black;
 }
 
+.splash-overlay > *:not(:nth-child(1)) {  
+    position: relative;
+}
+
+.glitch {
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0;
+    z-index: -1;
+}
+
+.glitchA {
+    color: #f00;
+    animation: textglitch 6s linear infinite;
+    animation-direction: reverse;
+}
+
+.glitchB {
+    color: #0f0;
+    animation: textglitch 6s linear infinite;
+}
+
+.glitchV {
+    color: #00f;
+}
+
+.splash-overlay > h1 {
+    text-align: center;
+}
+
 .splash-overlay > p {
     padding-top: 20px;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 150%;
+    text-shadow: 0 0 10px black;
 }
 
 .splash-name-standard {
