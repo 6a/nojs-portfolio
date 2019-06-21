@@ -248,7 +248,7 @@ nav a:hover {
 }
 
 .hamburger:focus div:nth-child(2) {
-    opacity: 0;
+    transform: translateX(50px);
     transition: 0.1s all ease-in-out;
 }
 
@@ -661,7 +661,7 @@ footer a {
 
 .project-info {
     font-size: 70%;
-    border-top: 1px solid rgb(255, 223, 30);
+    border-top: 1px solid rgb(255, 255, 255);
     padding-top: 5px;
     margin-top: 10px;
 }
@@ -684,10 +684,20 @@ footer a {
         border-image-source: linear-gradient(to top, rgb(0, 174, 255), rgb(153, 0, 255));
         border-image-slice: 1;
     }
+
+    .footer-content > .container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .footer-copyright > .container { 
+        padding-right: 10px;
+        padding-left: 10px;
+    }
     
     .container {
-        padding-right: 5px;
-        padding-left: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .splash-name-standard {
