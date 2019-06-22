@@ -21,6 +21,7 @@ body {
 section {
     position: relative;
     background: rgb(31, 28, 32);
+    z-index: 1;
 }
 
 hr {
@@ -352,7 +353,6 @@ nav a:hover {
     position: fixed;
     top: 0; right: 0; left: 0; bottom: 0;
     background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 3px);
-    z-index: -1;
     opacity: 0.5;
 }
 
@@ -472,6 +472,7 @@ footer {
     font-size: 16px;
     border-top: 2px solid rgb(115, 0, 255);
     position: relative;
+    z-index: 1;
 }
 
 footer > div {
