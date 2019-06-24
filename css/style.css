@@ -358,6 +358,12 @@ nav a:hover {
     opacity: 0.5;
 }
 
+@supports (-ms-ime-align:auto) {
+    .splash-overlay-fx {
+        position: absolute;
+    }
+}
+
 .splash-overlay > * > * {
     text-align: center;
     word-break: keep-all;
