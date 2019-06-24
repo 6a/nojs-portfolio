@@ -1,3 +1,15 @@
+:root {
+    --col-bg: hsl(0, 0%, 8%);
+    --col-bg-dark: hsl(0, 0%, 5%);
+    --col-highlight: hsl(350, 78%, 44%);
+    --col-hyperlink: hsl(198, 93%, 60%);
+    --col-quote: hsl(350, 78%, 24%);
+
+    --col-hr: white;
+    --col-text: hsl(0, 0%, 90%);
+    --col-text-faint: hsl(0, 0%, 80%);
+}
+
 html {
     letter-spacing: 0.05em;
     word-break: break-all;
@@ -13,9 +25,9 @@ body {
     height: 100%;
     position: relative;
 
-    background: hsl(207, 43%, 4%);
+    background: hsl(0, 0%, 8%);
 
-    color: rgb(240, 240, 240);
+    color: hsl(0, 0%, 90%);
 }
 
 section {
@@ -155,16 +167,24 @@ hr {
 }
 
 .top-full-border {
-    border-top: 4px solid white;
+    border-top: 4px solid hsl(350, 78%, 44%);
 }
 
 .section-header {
     font-size: 150%;
     text-align: center;
     padding: 14px 10px 10px 10px;
-    background: hsl(210, 89%, 6%);
-    border-bottom: 4px solid white;
+    background: hsl(0, 0%, 5%);
+    border-bottom: 4px solid hsl(350, 78%, 44%);
     line-height: 1em;
+}
+
+.no-pad-r {
+    padding-right: 0;
+}
+
+.no-pad-l {
+    padding-left: 0;
 }
 
 /* STYLING */
@@ -177,11 +197,11 @@ nav {
     z-index: 1000;
     top: 0; right: 0; left: 0;
     font-size: 1.1em;  
-    background: hsl(210, 89%, 6%);
+    background: hsl(0, 0%, 5%);
 
     box-sizing: border-box;
 
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid hsl(350, 78%, 44%);
 }
 
 nav > div {
@@ -202,8 +222,8 @@ nav > div {
 
 nav a {
     text-decoration: none;
-    color: rgb(245, 245, 245);
-    padding: 20px 0 20px 20px;
+    color: white;
+    padding: 20px 10px;
     box-sizing: border-box;
     background-color: inherit;
     border: none;
@@ -214,7 +234,7 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(233, 190, 53);
+    color: hsl(350, 78%, 44%);
 }
 
 .nav-style > *:nth-child(3) {
@@ -242,7 +262,7 @@ nav a:hover {
 
 .hamburger div {
     height: 3px;
-    background: rgb(245, 245, 245);
+    background: hsl(0, 0%, 90%);
     width: 26px;
 
     opacity: 1;
@@ -255,17 +275,17 @@ nav a:hover {
 
 .hamburger:focus div:nth-child(1) {
     transform: translate(0, 8px) rotate(225deg);
-    background: rgb(233, 190, 53);
+    background: hsl(350, 78%, 44%);
 }
 
 .hamburger:focus div:nth-child(2) {
     transform: translateX(50px);
-    background: rgb(233, 190, 53);
+    background: hsl(350, 78%, 44%);
 }
 
 .hamburger:focus div:nth-child(3) {
     transform: translate(0, -9px) rotate(-225deg);
-    background: rgb(233, 190, 53);
+    background: hsl(350, 78%, 44%);
 }
 
 .hamburger:focus ul {
@@ -465,20 +485,20 @@ nav a:hover {
 
 .splash-scroll-down-indicator a:nth-child(2) div:nth-child(1) {
     transform: translate(5px, 25px) rotate(30deg);
-    background: white;
+    background: hsl(350, 78%, 44%);
 }
 
 .splash-scroll-down-indicator a:nth-child(2) div:nth-child(2) {
     transform: translate(55px, 25px) rotate(-30deg);
-    background: white;
+    background: hsl(350, 78%, 44%);
 }
 
 /* FOOTER */
 footer {
-    background: rgb(2, 3, 20);
+    background: hsl(0, 0%, 5%);
     width: 100%;
     font-size: 16px;
-    border-top: 4px solid white;
+    border-top: 4px solid hsl(350, 78%, 44%);
     position: relative;
     z-index: 1;
 }
@@ -593,7 +613,7 @@ footer > div {
 .footer-copyright {
     background-color: rgba(0, 0, 0, 0.6);    
 
-    color: rgb(214, 214, 214);
+    color: hsl(0, 0%, 80%);
 }
 
 .footer-copyright > .container {
@@ -611,7 +631,7 @@ footer > div {
 
 footer a {
     text-decoration: none;
-    color: rgb(233, 190, 53);
+    color: hsl(198, 93%, 60%);
 }
 
 /* PROJECTS  */
@@ -626,7 +646,7 @@ footer a {
 }
 
 .project-media > img, .project-media > video {
-    border: 4px solid white;
+    border: 4px solid hsl(350, 78%, 44%);
 
     box-sizing: border-box;
     display: block;
@@ -649,34 +669,34 @@ footer a {
 
 .project-media > figcaption > a {
     text-decoration: none;
-    color: rgb(233, 190, 53);
+    color: hsl(198, 93%, 60%);
 }
 
 .project-tech-stack > li {
     box-sizing: border-box;
     padding: 10px;
     margin: 10px 0;
-    background: rgba(255, 255, 255, 0.1);
-    border-left: 4px solid rgb(233, 190, 53);
+    background: hsl(350, 78%, 24%);
+    border-left: 4px solid hsl(350, 78%, 44%);
     font-size: 90%;
 }
 
 .project-info {
     font-size: 70%;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid white;
     padding-top: 5px;
     margin-top: 10px;
 }
 
 .project-info > li > a {
     text-decoration: none;
-    color: rgb(233, 190, 53);
+    color: hsl(198, 93%, 60%);
 }
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
-    .project-media > video, .project-media > img {
-        border: 1px solid rgb(255, 255, 255);
+    figcaption, h1 {
+        text-align: center;
     }
 
     .footer-content > .container {
@@ -716,10 +736,6 @@ footer a {
 
     .footer-links a img {
         filter: none;
-    }
-
-    .footer-section h1 {
-        text-align: center;
     }
 
     .anchor-pad {
