@@ -29,28 +29,30 @@
     }
   }
 
-  var HAMBURGER = document.getElementById('hamburger')
+  window.addEventListener('DOMContentLoaded', function () {
+    var HAMBURGER = document.getElementById('hamburger')
 
-  HAMBURGER.addEventListener('focus', function (e) {
-    toggleBodyScroll(true)
-  })
+    HAMBURGER.addEventListener('focus', function (e) {
+      toggleBodyScroll(true)
+    })
 
-  HAMBURGER.addEventListener('focusout', function (e) {
-    toggleBodyScroll(false)
-  })
+    HAMBURGER.addEventListener('focusout', function (e) {
+      toggleBodyScroll(false)
+    })
 
-  window.addEventListener('hashchange', function (e) {
-    HAMBURGER.blur()
-  })
+    window.addEventListener('hashchange', function (e) {
+      HAMBURGER.blur()
+    })
 
-  var SECTIONS = document.getElementsByClassName('scrolltarget')
-  for (var index = 0; index < SECTIONS.length; index++) {
-    SECTIONS[index].targetElement = document.getElementById(SECTIONS[index].getAttribute('data-navtarget'))
-  }
+    var SECTIONS = document.getElementsByClassName('scrolltarget')
+    for (var index = 0; index < SECTIONS.length; index++) {
+      SECTIONS[index].targetElement = document.getElementById(SECTIONS[index].getAttribute('data-navtarget'))
+    }
 
-  window.addEventListener('scroll', function (e) {
+    window.addEventListener('scroll', function (e) {
+      handleScroll(SECTIONS)
+    })
+
     handleScroll(SECTIONS)
   })
-
-  handleScroll(SECTIONS)
 })(document, window)
