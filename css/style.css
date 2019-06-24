@@ -237,10 +237,6 @@ nav a {
     display: inline-block;
 }
 
-nav a:hover {
-    /* color: hsl(350, 78%, 44%); */
-}
-
 .nav-style > *:nth-child(3) {
     display: none;
 }
@@ -796,6 +792,10 @@ footer > div {
 
     nav a {
         padding: 15px 0;
+    }
+
+    #link-top {
+        color: hsl(350, 78%, 44%) !important;
     }
 }
 
