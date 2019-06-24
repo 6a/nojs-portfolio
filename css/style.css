@@ -187,6 +187,10 @@ hr {
     padding-left: 0;
 }
 
+.force-highlight {
+    color: hsl(350, 78%, 44%) !important;
+}
+
 /* STYLING */
 
 /* NAV */
@@ -234,7 +238,7 @@ nav a {
 }
 
 nav a:hover {
-    color: hsl(350, 78%, 44%);
+    /* color: hsl(350, 78%, 44%); */
 }
 
 .nav-style > *:nth-child(3) {

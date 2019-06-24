@@ -21,12 +21,34 @@
     <meta name="msapplication-TileColor" content="#573979">
     <meta name="theme-color" content="#ffffff">
 
-    <script>       
+    <script>      
         function toggleBodyScroll(lock) {
             if (lock) {
                 document.documentElement.style.overflowY = "hidden";
             } else {
                 document.documentElement.style.overflowY = "initial";
+            }
+        }
+
+        function isInBounds(scrollBase, referenceY, element) {
+            var rect = element.getBoundingClientRect()
+            var top = rect.y + scrollBase
+            var bottom = top + rect.height
+
+            return referenceY >top && referenceY < bottom
+        }
+
+        function handleScroll(sections) {
+            var scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+            var screenMid = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) / 2;
+            var currentReferencePosition = scrollPos + screenMid;
+
+            for (var index = 0; index < sections.length; index++) {
+                if (isInBounds(scrollPos, currentReferencePosition, sections[index])) {
+                    sections[index].targetElement.classList.add("force-highlight")
+                } else {
+                    sections[index].targetElement.classList.remove("force-highlight")
+                }
             }
         }
 
@@ -44,6 +66,17 @@
             window.addEventListener("hashchange", function (e) {
                 HAMBURGER.blur()
             })
+
+            var SECTIONS = document.getElementsByClassName("scrolltarget")
+            for (var index = 0; index < SECTIONS.length; index++) { 
+                SECTIONS[index].targetElement = document.getElementById(SECTIONS[index].getAttribute("data-navtarget"))
+            }
+
+            window.addEventListener("scroll", function (e) {
+                handleScroll(SECTIONS)
+            })
+
+            handleScroll(SECTIONS)
         })
     </script>
 </head>
@@ -53,13 +86,13 @@
     <nav id="navbar" class="ns">
         <div class="container nav-style">
             <div>
-                <a href="#" class="site-name bold no-pad-l">瑛之助</a>
+                <a id="link-top" href="#" class="site-name bold no-pad-l">瑛之助</a>
             </div>
             <div>
-                <a href="#about" class="bold">自己紹介</a>
-                <a href="#solo-projects" class="bold">自作</a>
-                <a href="#group-projects" class="bold">グループ作</a>
-                <a href="#info" class="bold no-pad-r">詳細・連絡</a>
+                <a id="link-about" href="#about" class="bold">自己紹介</a>
+                <a id="link-soloprojects" href="#solo-projects" class="bold">自作</a>
+                <a id="link-groupprojects" href="#group-projects" class="bold">グループ作</a>
+                <a id="link-info" href="#info" class="bold no-pad-r">詳細・連絡</a>
             </div>
             <div id="hamburger" class="hamburger" tabindex="0">
                 <div></div>
@@ -77,7 +110,7 @@
     </nav>
 
     <!-- SPLASH  -->
-    <section id="splash">
+    <section id="splash" class="scrolltarget" data-navtarget="link-top">
         <video playsinline muted autoplay loop poster="" width="1920" height="1080">
             <source src="./media/video/splash-veryslow-cr22-720.mp4" type="video/mp4">
         </video>
@@ -98,7 +131,7 @@
     </section>
 
     <!-- ABOUT  -->
-    <section class="top-full-border">
+    <section class="top-full-border scrolltarget" data-navtarget="link-about">
         <div id="about" class="anchor-pad"></div>
         <h1 class="section-header ns">自己紹介</h1>
         <div class="container about-style pad-top-bottom-20">
@@ -136,7 +169,7 @@
     </section>
 
     <!-- SOLO PROJECTS -->
-    <section class="top-full-border">
+    <section class="top-full-border scrolltarget" data-navtarget="link-soloprojects">
         <div id="solo-projects" class="anchor-pad"></div>
         <h1 class="section-header ns">自作</h1>
         <article class="project-article">
@@ -203,7 +236,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="scrolltarget" data-navtarget="link-info">
         <div id="info" class="anchor-pad"></div>
         <div class="footer-content">
             <div class="container">
