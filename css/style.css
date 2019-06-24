@@ -162,7 +162,7 @@ hr {
     font-size: 150%;
     text-align: center;
     padding: 14px 10px 10px 10px;
-    background: hsl(210, 89%, 4%);
+    background: hsl(210, 89%, 6%);
     border-bottom: 4px solid white;
     line-height: 1em;
 }
@@ -177,7 +177,7 @@ nav {
     z-index: 1000;
     top: 0; right: 0; left: 0;
     font-size: 1.1em;  
-    background: hsl(207, 43%, 8%);
+    background: hsl(210, 89%, 6%);
 
     box-sizing: border-box;
 
@@ -670,9 +670,7 @@ footer a {
 /* RESPONSIVITY */
 @media (max-width: 600px) {
     .project-media > video, .project-media > img {
-        border: 1px solid rgb(153, 0, 255);
-        border-image-source: linear-gradient(to top, rgb(224 ,50 ,230), rgb(179 ,50, 230));
-        border-image-slice: 1;
+        border: 1px solid rgb(255, 255, 255);
     }
 
     .footer-content > .container {
