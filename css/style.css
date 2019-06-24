@@ -641,9 +641,12 @@ footer > div {
 }
 
 /* PROJECTS  */
+.project-article { 
+    box-sizing: border-box;
+}
+
 .project-article:nth-child(even) {
     background: rgba(255, 255, 255, 0.05);
-    box-sizing: border-box;
 }
 
 .project-title {
