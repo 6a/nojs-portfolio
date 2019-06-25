@@ -558,6 +558,7 @@ footer > div {
 }
 
 .footer-links {
+    margin-top: 20px;
     display: -ms-grid;
     display: grid;
 
@@ -633,7 +634,7 @@ footer > div {
     text-decoration: none;
     color: white;
     border-bottom: 1px solid hsl(350, 78%, 44%);
-    padding: 2px;
+    padding: 0 1px;
 }
 
 .footer-section a:hover {
@@ -652,6 +653,7 @@ footer > div {
 .project-title {
     font-size: 150%;
     padding-bottom: 20px;
+    line-height: 1em;
 }
 
 .project-media > img, .project-media > video {
@@ -680,7 +682,7 @@ footer > div {
     text-decoration: none;
     color: white;
     border-bottom: 1px solid hsl(350, 78%, 44%);
-    padding: 2px;
+    padding: 0 1px;
 }
 
 .project-media > figcaption > a:hover {
@@ -689,11 +691,27 @@ footer > div {
 
 .project-tech-stack > li {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 5px 10px;
     margin: 10px 0;
     background: hsl(350, 78%, 24%);
     border-left: 4px solid hsl(350, 78%, 44%);
     font-size: 90%;
+}
+
+.project-tech-stack > li > p {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+}
+
+.project-tech-stack > li > p > span {
+    padding: 7px;
+    line-height: 1em;
+    margin: 5px 5px;
+    background: black;
+    border-left: 4px solid hsl(350, 78%, 44%);
+    white-space: nowrap;
 }
 
 .project-info {
@@ -707,7 +725,7 @@ footer > div {
     text-decoration: none;
     color: white;
     border-bottom: 1px solid hsl(350, 78%, 44%);
-    padding: 2px;
+    padding: 0 1px;
 }
 
 .project-info > li > a:hover {
