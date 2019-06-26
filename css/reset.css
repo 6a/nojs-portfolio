@@ -24,6 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
+	outline: none;
 }
 
 /* HTML5 display-role reset for older browsers */
