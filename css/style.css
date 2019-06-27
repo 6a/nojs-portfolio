@@ -734,10 +734,6 @@ footer > div {
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
-    figcaption, h1 {
-        text-align: center;
-    }
-
     .footer-content > .container {
         padding-right: 10px;
         padding-left: 10px;
