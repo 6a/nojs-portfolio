@@ -506,6 +506,28 @@ nav a {
     background: hsl(350, 78%, 44%);
 }
 
+/* ABOUT */
+.jico-text h3 {
+    padding: 0.3em 0;
+    text-align: justify;
+}
+
+.jico-text p {
+    padding: 0.2em 0;
+}
+
+.jico-text * {
+    padding-right: 20px !important;
+}
+
+.jico-text *:nth-child(0) {
+    padding-top: 0;
+}
+
+.jico-text *:last-child {
+    padding-bottom: 0;
+}
+
 /* FOOTER */
 footer {
     background: hsl(0, 0%, 5%);
@@ -720,6 +742,10 @@ footer > div {
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
+    .jico-text * {
+        padding-right: 0 !important;
+    }
+
     .project-tech-stack > li > p > span {
         font-size: 85%;
     }
