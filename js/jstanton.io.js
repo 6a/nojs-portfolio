@@ -48,6 +48,11 @@
     for (var index = 0; index < SECTIONS.length; index++) {
       SECTIONS[index].targetElement = document.getElementById(SECTIONS[index].getAttribute('data-navtarget'))
     }
+    
+    var VIDEOS = document.getElementsByTagName("video")
+    for (var index = 0; index < VIDEOS.length; index++) {
+      VIDEOS[index].volume = 0.4;
+    }
 
     window.addEventListener('scroll', function (e) {
       handleScroll(SECTIONS)
