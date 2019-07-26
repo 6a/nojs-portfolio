@@ -138,40 +138,6 @@ hr {
     font-weight: 700;
 }
 
-.s-text-with-image {
-    display: -ms-grid;
-    display: grid;
-
-    -ms-grid-columns: auto auto;
-    grid-template-columns: auto auto;
-}
-
-.s-text-with-image > div {
-    max-width: 100%;
-    grid-row: 1;
-
-    -ms-grid-row: 1;
-    grid-column: 1;
-    -ms-grid-column: 1;   
-}
-
-.s-text-with-image > img {
-    -ms-grid-row-align: start;
-    margin-bottom: auto;
-    grid-row: 1;
-
-    -ms-grid-row: 1;
-    grid-column: 2;
-    -ms-grid-column: 2;   
-}
-
-.s-text-with-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    min-height: 1px;
-}
-
 .anchor-pad {
     position: absolute;
     width: 100%;
@@ -507,25 +473,8 @@ nav a {
 }
 
 /* ABOUT */
-.jico-text h3 {
-    padding: 0.3em 0;
+.jico-text * {
     text-align: justify;
-}
-
-.jico-text p {
-    padding: 0.2em 0;
-}
-
-.jico-text *:not(a) {
-    padding-right: 20px !important;
-}
-
-.jico-text *:nth-child(0) {
-    padding-top: 0;
-}
-
-.jico-text *:last-child {
-    padding-bottom: 0;
 }
 
 .jico-text a {
@@ -537,6 +486,15 @@ nav a {
 
 .jico-text a:hover {
     border-width: 2px;
+}
+
+.jico-text img {
+    display: block;
+    height: auto;
+    min-height: 1px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -754,10 +712,6 @@ footer > div {
 
 /* RESPONSIVITY */
 @media (max-width: 600px) {
-    .jico-text * {
-        padding-right: 0 !important;
-    }
-
     .project-tech-stack > li > p > span {
         font-size: 85%;
     }
@@ -809,11 +763,6 @@ footer > div {
         height: 60px;
     }
 
-    .s-text-with-image {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
     .splash-scroll-down-indicator a:nth-child(1) {
         display: inline-block;
     }
@@ -839,13 +788,22 @@ footer > div {
     #link-top {
         color: hsl(350, 78%, 44%) !important;
     }
+
+
+}
+
+@media (max-width: 790px) {
+    .jico-text img {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 }
 
 @media (min-width: 790px) {
     .container {
         width: 750px;
     }
-    
 }
 
 @media (min-width: 1010px) {
