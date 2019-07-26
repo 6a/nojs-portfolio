@@ -516,7 +516,7 @@ nav a {
     padding: 0.2em 0;
 }
 
-.jico-text * {
+.jico-text *:not(a) {
     padding-right: 20px !important;
 }
 
@@ -527,6 +527,18 @@ nav a {
 .jico-text *:last-child {
     padding-bottom: 0;
 }
+
+.jico-text a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid hsl(350, 78%, 44%);
+    padding: 0 1px;
+}
+
+.jico-text a:hover {
+    border-width: 2px;
+}
+
 
 /* FOOTER */
 footer {
