@@ -477,11 +477,32 @@ nav a {
     text-align: justify;
 }
 
+.jico-text p {
+    margin: 0.2em 0;
+}
+
+.jico-text h3 {
+    margin: 0.3em 0;
+}
+
+.jico-text > *:nth-child(2) {
+    margin-top: 0;
+}
+
+.jico-text > *:last-child {
+    margin-bottom: 0;
+}
+
 .jico-text a {
     text-decoration: none;
     color: white;
     border-bottom: 1px solid hsl(350, 78%, 44%);
     padding: 0 1px;
+}
+
+.jico-text ul {
+    list-style: disc;
+    padding-left: 2em;
 }
 
 .jico-text a:hover {
