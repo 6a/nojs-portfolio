@@ -1,6 +1,8 @@
 :root {
     --col-bg: hsl(0, 0%, 8%);
     --col-bg-dark: hsl(0, 0%, 5%);
+    --col-bg-dark-highlight: hsl(0, 0%, 20%);
+    --col-bg-light: hsl(0, 0%, 80%);
     --col-highlight: hsl(350, 78%, 44%);
     --col-hyperlink: hsl(198, 93%, 60%);
     --col-quote: hsl(350, 78%, 24%);
@@ -501,11 +503,13 @@ nav a {
 }
 
 .jico-text ul li {
-    margin: 10px;
-    padding: 10px;
-    background: rgb(206, 206, 206);
-    color: rgb(22, 22, 22);
-    font-size: 0.9em;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background: hsl(0, 0%, 80%);
+    border-left: 4px solid hsl(350, 78%, 44%);
+    font-size: 90%;
+    color: black;
 }
 
 .jico-text a:hover {
@@ -698,7 +702,7 @@ footer > div {
     box-sizing: border-box;
     padding: 5px 10px;
     margin: 10px 0;
-    background: hsl(350, 78%, 24%);
+    background: hsl(0, 0%, 15%);
     border-left: 4px solid hsl(350, 78%, 44%);
     font-size: 90%;
 }
