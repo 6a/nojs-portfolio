@@ -659,6 +659,20 @@ footer > div {
     background: rgba(255, 255, 255, 0.05);
 }
 
+.project-text > ul.inline-list {
+   list-style: square; 
+   padding-left: 1em;
+
+}
+
+.project-text > *:not(.project-tech-stack) {
+    margin-bottom: 10px;
+}
+
+.project-text > h4 {
+    margin-bottom: 0 !important;
+}
+
 .project-title {
     font-size: 150%;
     padding-bottom: 20px;
@@ -702,7 +716,7 @@ footer > div {
     box-sizing: border-box;
     padding: 5px 10px;
     margin: 10px 0;
-    background: hsl(0, 0%, 15%);
+    background: hsl(0, 0%, 20%);
     border-left: 4px solid hsl(350, 78%, 44%);
     font-size: 90%;
 }

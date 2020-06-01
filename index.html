@@ -113,6 +113,82 @@
     <section class="top-full-border scrolltarget" data-navtarget="link-soloprojects">
         <div id="solo-projects" class="anchor-pad"></div>
         <h1 class="section-header ns">自作</h1>
+
+        <article class="project-article">
+            <div class="container pad-top-bottom-20">
+                <div id="project-blade-ii-online" class="anchor-pad"></div>
+                <h1 class="project-title">Blade II Online</h1>
+                <div class="project-media">
+                    <video src="./media/video/b2o.mp4" controls poster="./media/img/posters/b2o.jpg"></video>
+                    <figcaption>ソースコードは次のリンクでご覧になれます：
+                        <a href="https://github.com/6a/blade-ii-online-game-client" rel="noopener noreferrer" target="_blank">[ゲームクライエント]</a>
+                        <a href="https://github.com/6a/blade-2-online-client-electron" rel="noopener noreferrer" target="_blank">[ゲームランチャー]</a>
+                        <a href="https://github.com/6a/blade2-serverless-api" rel="noopener noreferrer" target="_blank">[REST API]</a>
+                        <a href="https://github.com/6a/blade-ii-game-server" rel="noopener noreferrer" target="_blank">[ゲームサーバー]</a>
+                    </figcaption>
+                </div>
+                <div class="project-text">
+                    <ul class="project-tech-stack">
+                        <li>
+                            <h4>Unreal Engine 4</h4>
+                            <p><span>C++</span><span>WebSocket でオンライン対応</span><span>Materials</span><span>自製カードアニメーションシステム</span><span>UMG UI</span><span>Windows 対応</span><span>ファイル I/O</span><span>設定システム</span><span>口パクするアバター</span><span>ローカルの対 AI モード</span><span>チュートリアル</span><span>切り替え可能のアバター</span></p>
+                        </li>
+                        <li>
+                            <h4>GIMP</h4>
+                            <p><span>カードテキスチャー作成</span><span>テキスチャ編集</span><span>スプライトシート作成</span></p>
+                        </li>
+                        <li>
+                            <h4>Adobe Photoshop</h4>
+                            <p><span>ロゴ作成</span><span>UI スプライト作成</span></p>
+                        </li>
+                        <li>
+                            <h4>Electron Framework</h4>
+                            <p><span>JavaScript</span><span>HTML</span><span>CSS</span><span>WebSocket</span><span>HTTP 対応</span><span>自製 JavaScript MVP フレームワーク</span></p>
+                        </li>
+                        <li>
+                            <h4>AWS</h4>
+                            <p><span>Go Lambda</span><span>API Gateway</span><span>MySQL RDS</span><span>EC2 上 Go ゲームサーバー</span></p>
+                        </li>
+                        <li>
+                            <h4>Cloudflare</h4>
+                            <p><span>DNS</span><span>SSL/TLS</span></p>
+                        </li>
+                        <li>
+                            <h4>その他</h4>
+                            <p><span>NGINX リバースプロキシ</span><span>Ubuntu サーバー</span><span>systemd サービス化</span><span>Ableton Live でサウンド作成・編集</span><span>Postman での API テスト</span><span>PostWoman での WebSocket テスト</span></p>
+                        </li>
+                    </ul>
+                    
+                    <p>Blade II Online（ブレード II オンライン）は大学４年生の時に開発した、Unreal Engine 4・C++、AWS、Go、Electron・JavaScript・HTML・CSS を活用する、一対一のオンラインカードゲームです。英雄伝説 閃の軌跡 II、東京ザナドゥ、という日本ファルコムの作品に存在するミニゲームに基づいています。</p>
+                    <p>このプロジェクトの目的は、ブレードというゲームをオンライン化できるかどうかを調査し、実現したらどのようなプレイ感になるか、本当に楽しいかどうか、みたいな質問に応じることでした。結局、実装するには成功しましたが、楽しいかどうかはまた別問題です。</p>
+                    <p>上記の動画はアカウント登録、ログイン、マッチメイキングの過程を示し、その後２人のプレイヤーがネット上でマッチをすることを示しています。</p>
+
+                    <h4>Blade II Online は４つの主要コンポーネントによって構成されています：</h4>
+                    <ul class="inline-list">
+                        <li>Amazon EC2 インスタンスにホストされ、Amazon RDS インスタンスに支えられ、NGINX にネットに公開され、Cloudflare にリバースプロキシされた Go で作成したマッチメイキング兼ゲームサーバー。</li>
+                        <li>Go で作成した AWS Lambda をネットに公開する Amazon API Gateway を活用する REST API。</li>
+                        <li>JavaScript、HTML、CSS で作成した Electron フレームワークを活用するラーンチャーアプリケーション。</li>
+                        <li>Unreal Engine 4 と C++ で作成したゲームクライエント。</li>
+                    </ul>
+
+                    <h4>フィーチャー概要</h4>
+                    <ul class="inline-list">
+                        <li>マッチ歴、プロフィール、ハイスコアランキングを含まれる Elo ランキングシステム。</li>
+                        <li>アカウント登録とログインシステム。</li>
+                        <li>トーケンベース認証システム。</li>
+                        <li>完全に実装されている設定システム（ラーンチャーのみ。ゲームは言語や音量に限定）。</li>
+                        <li>コンテキストに基づく吹き出しと口パクできるアニメーションしている敵のアバター。</li>
+                        <li>C++で作成した特製アニメーションシステムで動かされているカードのアニメーション。</li>
+                        <li>３つのマッチの類：チュートリアルマッチ、対 AI マッチ、オンラインマッチ。</li>
+                        <li>UMG UI Designer で作成した 2D アニメーション。</li>
+                    </ul>
+                </div>
+                <ul class="project-info">
+                    <li>剣の遊戯 / 英雄伝説 閃の軌跡 オリジナルサウンドトラック / Copyright &copy; Nihon Falcom Corporation</li>
+                </ul>
+            </div>
+        </article> 
+
         <article class="project-article">
             <div class="container pad-top-bottom-20">
                 <div id="project-silent-knight" class="anchor-pad"></div>
@@ -125,7 +201,7 @@
                     <ul class="project-tech-stack">
                         <li>
                             <h4>Unity</h4>
-                            <p><span>C#</span><span>ShaderLab</span><span>特注 A* パスファインダー</span><span>手続き型ステージ生成</span><span>日本語と英語のローカライズ</span><span>経験値とレベルシステム</span><span>アンドロイド最適化</span><span>アニメーション適用</span><span>インタラクティブ UI</span></p>
+                            <p><span>C#</span><span>ShaderLab</span><span>特注 A* パスファインダー</span><span>手続き型レベル生成</span><span>日本語と英語のローカライズ</span><span>経験値とレベルシステム</span><span>アンドロイド最適化</span><span>アニメーション適用</span><span>インタラクティブ UI</span></p>
                         </li>
                         <li>
                             <h4>GIMP</h4>
