@@ -442,7 +442,7 @@ nav a {
     height: 60px;
     width: 60px;
     box-shadow: 0 0 20px black;
-    border-radius: 1000000px;
+    border-radius: 100%;
 }
 
 
@@ -887,9 +887,9 @@ iframe.project-media  {
     
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1410px) {
     .container {
-        width: 1170px;
+        width: 1370px;
     }
     
 }
