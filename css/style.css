@@ -887,9 +887,9 @@ iframe.project-media  {
     
 }
 
-@media (min-width: 1410px) {
+@media (min-width: 1210px) {
     .container {
-        width: 1370px;
+        width: 1170px;
     }
     
 }
