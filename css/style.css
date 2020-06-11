@@ -485,6 +485,10 @@ nav a {
     margin-bottom: 10px;
 }
 
+.jico-text > hr {
+    margin-bottom: 20px !important;
+}
+
 .jico-text h3 {
     margin: 0.3em 0;
 }
