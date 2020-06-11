@@ -508,10 +508,9 @@ nav a {
     box-sizing: border-box;
     padding: 10px 15px;
     margin: 10px 0;
-    background: hsl(0, 0%, 90%);
+    background: hsl(0, 0%, 20%);
     border-left: 4px solid hsl(208.1, 76%, 59.2%);
     font-size: 90%;
-    color: black;
 }
 
 .jico-text img {

@@ -508,10 +508,9 @@ nav a {
     box-sizing: border-box;
     padding: 10px 15px;
     margin: 10px 0;
-    background: var(--col-text);
+    background: var(--col-bg-light);
     border-left: var(--border-width-standard) solid var(--col-highlight);
     font-size: 90%;
-    color: var(--col-dark-detail);
 }
 
 .jico-text img {
