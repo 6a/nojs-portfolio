@@ -31,9 +31,9 @@ body {
     height: 100%;
     position: relative;
 
-    background: var(--col-primary);
+    background: hsl(0, 0%, 8%);
 
-    color: var(--col-text);
+    color: hsl(0, 0%, 90%);
 }
 
 section {
@@ -45,7 +45,7 @@ section {
 hr {
     margin: 0;
     margin-top: 20px;
-    color: var(--col-highlight);
+    border: 1px solid hsl(208.1, 76%, 59.2%);
 }
 
 /* IE HACK */
@@ -153,15 +153,15 @@ hr {
 }
 
 .top-full-border {
-    border-top: var(--border-width-standard) solid var(--col-highlight);
+    border-top: 4px solid hsl(208.1, 76%, 59.2%);
 }
 
 .section-header {
     font-size: 150%;
     text-align: center;
     padding: 14px 10px 10px 10px;
-    background: var(--col-bg-dark);
-    border-bottom: var(--border-width-standard) solid var(--col-highlight);
+    background: hsl(0, 0%, 5%);
+    border-bottom: 4px solid hsl(208.1, 76%, 59.2%);
     line-height: 1em;
 }
 
@@ -174,7 +174,7 @@ hr {
 }
 
 .force-highlight {
-    color: var(--col-highlight) !important;
+    color: hsl(208.1, 76%, 59.2%) !important;
 }
 
 /* STYLING */
@@ -187,11 +187,11 @@ nav {
     z-index: 1000;
     top: 0; right: 0; left: 0;
     font-size: 1.1em;  
-    background: var(--col-bg-dark);
+    background: hsl(0, 0%, 5%);
 
     box-sizing: border-box;
 
-    border-bottom: var(--border-width-standard) solid var(--col-highlight);
+    border-bottom: 4px solid hsl(208.1, 76%, 59.2%);
 }
 
 nav > div {
@@ -212,7 +212,7 @@ nav > div {
 
 nav a {
     text-decoration: none;
-    color: var(--col-text-bright);
+    color: hsl(0, 0%, 100%);
     padding: 20px 10px;
     box-sizing: border-box;
     background-color: inherit;
@@ -248,7 +248,7 @@ nav a {
 
 .hamburger div {
     height: 3px;
-    background: var(--col-text);
+    background: hsl(0, 0%, 90%);
     width: 26px;
 
     opacity: 1;
@@ -261,17 +261,17 @@ nav a {
 
 .hamburger:focus div:nth-child(1) {
     transform: translate(0, 8px) rotate(225deg);
-    background: var(--col-highlight);
+    background: hsl(208.1, 76%, 59.2%);
 }
 
 .hamburger:focus div:nth-child(2) {
     transform: translateX(50px);
-    background: var(--col-highlight);
+    background: hsl(208.1, 76%, 59.2%);
 }
 
 .hamburger:focus div:nth-child(3) {
     transform: translate(0, -9px) rotate(-225deg);
-    background: var(--col-highlight);
+    background: hsl(208.1, 76%, 59.2%);
 }
 
 .hamburger:focus ul {
@@ -374,7 +374,7 @@ nav a {
     text-align: center;
     word-break: keep-all;
     font-size: 150%;
-    text-shadow: 0 0 10px var(--col-dark-detail);
+    text-shadow: 0 0 10px black;
 }
 
 .splash-overlay > *:not(:nth-child(1)) {  
@@ -389,13 +389,13 @@ nav a {
 }
 
 .glitchA {
-    color: var(--col-glitch-a);
+    color: #f00;
     animation: textglitch 6s linear infinite;
     animation-direction: reverse;
 }
 
 .glitchB {
-    color: var(--col-glitch-b);
+    color: #0f0;
     animation: textglitch 6s linear infinite;
 }
 
@@ -412,7 +412,7 @@ nav a {
     text-align: center;
     word-break: keep-all;
     font-size: 150%;
-    text-shadow: 0 0 10px var(--col-dark-detail);
+    text-shadow: 0 0 10px black;
 }
 
 .splash-name-standard {
@@ -446,7 +446,7 @@ nav a {
 .splash-scroll-down-indicator a:nth-child(1) img {
     height: 60px;
     width: 60px;
-    box-shadow: 0 0 20px var(--col-dark-detail);
+    box-shadow: 0 0 20px black;
     border-radius: 100%;
 }
 
@@ -462,7 +462,7 @@ nav a {
 
 .splash-scroll-down-indicator a:nth-child(2) div {
     width: 60px;
-    box-shadow: 0 0 20px var(--col-dark-detail);
+    box-shadow: 0 0 20px black;
     height: 4px;
     position: absolute;
 
@@ -471,12 +471,12 @@ nav a {
 
 .splash-scroll-down-indicator a:nth-child(2) div:nth-child(1) {
     transform: translate(5px, 25px) rotate(30deg);
-    background: var(--col-highlight);
+    background: hsl(208.1, 76%, 59.2%);
 }
 
 .splash-scroll-down-indicator a:nth-child(2) div:nth-child(2) {
     transform: translate(55px, 25px) rotate(-30deg);
-    background: var(--col-highlight);
+    background: hsl(208.1, 76%, 59.2%);
 }
 
 /* ABOUT */
@@ -495,8 +495,8 @@ nav a {
 
 .jico-text a {
     text-decoration: none;
-    color: var(--col-text-bright);
-    border-bottom: 1px solid var(--col-highlight);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1px solid hsl(208.1, 76%, 59.2%);
     padding: 0 1px;
 }
 
@@ -508,10 +508,10 @@ nav a {
     box-sizing: border-box;
     padding: 10px 15px;
     margin: 10px 0;
-    background: var(--col-text);
-    border-left: var(--border-width-standard) solid var(--col-highlight);
+    background: hsl(0, 0%, 90%);
+    border-left: 4px solid hsl(208.1, 76%, 59.2%);
     font-size: 90%;
-    color: var(--col-dark-detail);
+    color: black;
 }
 
 .jico-text img {
@@ -523,15 +523,15 @@ nav a {
     margin-bottom: 20px;
     max-width: 400px;
 
-    border: var(--border-width-standard) solid var(--col-highlight);
+    border: 4px solid hsl(208.1, 76%, 59.2%);
     box-sizing: border-box;
 }
 
 /* FOOTER */
 footer {
-    background: var(--col-bg-dark);
+    background: hsl(0, 0%, 5%);
     width: 100%;
-    border-top: var(--border-width-standard) solid var(--col-highlight);
+    border-top: 4px solid hsl(208.1, 76%, 59.2%);
     position: relative;
     z-index: 1;
 }
@@ -617,9 +617,9 @@ footer > div {
 }
 
 .footer-copyright {
-    background-color: var(--col-bg-dark);    
-    border-top: var(--border-width-standard) solid var(--col-highlight);
-    color: var(--col-text-bright);
+    background-color: hsl(0, 0%, 5%);    
+    border-top: 4px solid hsl(208.1, 76%, 59.2%);
+    color: hsl(0, 0%, 100%);
 }
 
 .footer-copyright > .container {
@@ -637,8 +637,8 @@ footer > div {
 
 .footer-section a {
     text-decoration: none;
-    color: var(--col-text-bright);
-    border-bottom: 1px solid var(--col-highlight);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1px solid hsl(208.1, 76%, 59.2%);
     padding: 0 1px;
 }
 
@@ -671,8 +671,8 @@ footer > div {
 
 .project-text a {
     text-decoration: none;
-    color: var(--col-text-bright);
-    border-bottom: 1px solid var(--col-highlight);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1px solid hsl(208.1, 76%, 59.2%);
     padding: 0 1px;
 }
 
@@ -688,7 +688,7 @@ footer > div {
 
 .project-media > img, 
 .project-media > video {
-    border: var(--border-width-standard) solid var(--col-highlight);
+    border: 4px solid hsl(208.1, 76%, 59.2%);
 
     box-sizing: border-box;
     display: block;
@@ -706,15 +706,15 @@ iframe.project-media  {
 
 .iframe-video-wrapper {
 	position: relative;
-    padding-bottom: calc(56.25% - var(--border-width-standard));
+    padding-bottom: calc(56.25% - 4px);
 	height: 0;
     overflow: hidden;
     
-    border: var(--border-width-standard) solid var(--col-highlight);
+    border: 4px solid hsl(208.1, 76%, 59.2%);
 }
 
 .force-ratio-205 {
-    padding-bottom: calc(48.75% - var(--border-width-standard)) !important;
+    padding-bottom: calc(48.75% - 4px) !important;
 }
 
 .project-media > video:fullscreen {
@@ -732,8 +732,8 @@ iframe.project-media  {
 
 .project-media > figcaption > a {
     text-decoration: none;
-    color: var(--col-text-bright);
-    border-bottom: 1px solid var(--col-highlight);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1px solid hsl(208.1, 76%, 59.2%);
     padding: 0 1px;
 }
 
@@ -745,8 +745,8 @@ iframe.project-media  {
     box-sizing: border-box;
     padding: 5px 10px;
     margin: 10px 0;
-    background: var(--col-bg-light);
-    border-left: var(--border-width-standard) solid var(--col-highlight);
+    background: hsl(0, 0%, 20%);
+    border-left: 4px solid hsl(208.1, 76%, 59.2%);
     font-size: 90%;
 }
 
@@ -761,22 +761,22 @@ iframe.project-media  {
     padding: 7px;
     line-height: 1em;
     margin: 5px 5px;
-    background: var(--col-dark-detail);
-    border-left: var(--border-width-standard) solid var(--col-highlight);
+    background: black;
+    border-left: 4px solid hsl(208.1, 76%, 59.2%);
     white-space: nowrap;
 }
 
 .project-info {
     font-size: 70%;
-    border-top: 1px solid var(--col-text-bright);
+    border-top: 1px solid hsl(0, 0%, 100%);
     padding-top: 5px;
     margin-top: 10px;
 }
 
 .project-info > li > a {
     text-decoration: none;
-    color: var(--col-text-bright);
-    border-bottom: 1px solid var(--col-highlight);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1px solid hsl(208.1, 76%, 59.2%);
     padding: 0 1px;
 }
 
@@ -860,7 +860,7 @@ iframe.project-media  {
     }
 
     #link-top {
-        color: var(--col-highlight) !important;
+        color: hsl(208.1, 76%, 59.2%) !important;
     }
 
 
